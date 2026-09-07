@@ -1,4 +1,4 @@
-﻿/* Base Reset */
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #061c47;
+    background-color: #01112b; /* Dark navy background matching original design */
     color: #ffffff;
     line-height: 1.6;
 }
@@ -22,11 +22,11 @@ body {
     text-align: center;
 }
 
-/* Navigation */
+/* Navigation Header */
 .navbar {
-    background-color: #0d2c60;
+    background-color: #061a38; /* Header navy tone */
     padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-container {
@@ -43,25 +43,25 @@ body {
 
 .nav-links {
     color: #ffffff;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
 }
 
-    .nav-links a {
-        color: #ffffff;
-        text-decoration: none;
-        margin: 0 10px;
-        transition: color 0.3s;
-    }
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: opacity 0.3s;
+}
 
-        .nav-links a:hover {
-            color: #6495ed;
-        }
+.nav-links a:hover {
+    opacity: 0.8;
+}
 
-/* Hero Section */
+/* Hero Section with Custom Blue Overlay */
 .hero {
     position: relative;
-    height: 400px;
+    height: 420px;
     background: url('heropage.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -73,78 +73,82 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(3, 18, 48, 0.95) 0%, rgba(3, 18, 48, 0.75) 50%, rgba(3, 18, 48, 0.2) 100%);
+    /* Smooth gradient matching the image's dark-to-light blue tint */
+    background: linear-gradient(90deg, #01112b 0%, rgba(1, 17, 43, 0.85) 45%, rgba(1, 17, 43, 0.2) 100%);
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
     max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-    .hero-content h1 {
-        font-size: 32px;
-        font-weight: 700;
-        margin-bottom: 20px;
-        line-height: 1.25;
-    }
+.hero-content h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    line-height: 1.25;
+    color: #ffffff;
+}
 
-    .hero-content p {
-        font-size: 15px;
-        color: #e0e6ed;
-        max-width: 500px;
-    }
+.hero-content p {
+    font-size: 14px;
+    color: #cfd8e3;
+    max-width: 500px;
+}
 
 /* Content Sections */
 .about-mission {
-    padding: 50px 0 30px 0;
+    padding: 60px 0 40px 0;
 }
 
 .grid-2-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 50px;
 }
 
 .info-box h2 {
-    font-size: 26px;
+    font-size: 24px;
+    font-weight: 700;
     margin-bottom: 15px;
+    color: #ffffff;
 }
 
 .info-box p {
-    font-size: 13.5px;
-    color: #d1dbe5;
-    line-height: 1.5;
+    font-size: 13px;
+    color: #b0becd;
+    line-height: 1.6;
 }
 
 .why-us {
-    padding: 30px 0 60px 0;
+    padding: 30px 0 80px 0;
 }
 
-    .why-us h2 {
-        font-size: 28px;
-        margin-bottom: 15px;
-    }
+.why-us h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
 
-    .why-us p {
-        font-size: 14px;
-        color: #d1dbe5;
-        max-width: 750px;
-        margin: 0 auto;
-        line-height: 1.6;
-    }
+.why-us p {
+    font-size: 13px;
+    color: #b0becd;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
 
 .spacer {
-    height: 180px;
+    height: 120px;
 }
 
 /* Footer Section */
 .footer {
-    background-color: #0b2552;
-    padding: 30px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #061a38;
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-container {
@@ -156,14 +160,14 @@ body {
 }
 
 .footer-logo-img {
-    height: 30px;
+    height: 32px;
     width: auto;
     display: block;
 }
 
 .footer-column h4 {
     font-size: 11px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: #ffffff;
     font-weight: 600;
     text-transform: uppercase;
@@ -173,48 +177,44 @@ body {
     list-style: none;
 }
 
-    .footer-column ul li {
-        margin-bottom: 4px;
-    }
+.footer-column ul li {
+    margin-bottom: 5px;
+}
 
-        .footer-column ul li a {
-            color: #a0b3ce;
-            text-decoration: none;
-            font-size: 11px;
-        }
+.footer-column ul li a {
+    color: #8da2ba;
+    text-decoration: none;
+    font-size: 11px;
+}
 
-            .footer-column ul li a:hover {
-                color: #ffffff;
-            }
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
 
 .social-icons {
     display: flex;
-    gap: 10px;
+    gap: 12px;
 }
 
-    .social-icons a {
-        color: #ffffff;
-        font-size: 13px;
-        text-decoration: none;
-    }
+.social-icons a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+}
 
-        .social-icons a:hover {
-            color: #6495ed;
-        }
-
-/* Responsive Adjustments */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
         gap: 15px;
     }
-
+    
     .grid-2-col {
         grid-template-columns: 1fr;
     }
 
     .hero-content h1 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .footer-container {
