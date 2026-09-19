@@ -28,7 +28,7 @@ body {
         radial-gradient(circle at 10% 20%, rgba(98, 172, 255, 0.45) 0%, transparent 45%),
         radial-gradient(circle at 80% 50%, rgba(13, 71, 161, 0.6) 0%, transparent 60%),
         linear-gradient(180deg, #103b82 0%, #031c4a 100%);
-    padding: 25px 0;
+    padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
