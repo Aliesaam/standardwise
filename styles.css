@@ -168,13 +168,14 @@ body {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center; /* Aligns logo and footer text vertically */
     flex-wrap: wrap;
     gap: 20px;
 }
 
 .footer-logo-img {
-    height: 110px;
+    height: 45px; /* Restores a clean, professional size */
+    max-height: 50px; /* Prevents overflow */
     width: auto;
     display: block;
     object-fit: contain;
