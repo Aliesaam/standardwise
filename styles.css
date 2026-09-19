@@ -44,16 +44,16 @@ body {
 
 .nav-links {
     color: #ffffff;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 22px; /* Increased text size (from 15px/16px to 22px) */
+    font-weight: 600; /* Makes the font slightly bolder */
 }
 
-    .nav-links a {
-        color: #ffffff;
-        text-decoration: none;
-        margin: 0 8px;
-        transition: opacity 0.3s;
-    }
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 12px; /* Increases spacing between links */
+    transition: opacity 0.3s;
+}
 
         .nav-links a:hover {
             opacity: 0.8;
