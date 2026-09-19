@@ -36,7 +36,7 @@ body {
 }
 
 .brand-logo {
-    height: 90px; /* Change this line to 55px */
+    height: 120px; /* Change this line to 55px */
     width: auto;
     display: block;
     object-fit: contain; /* Add this line */
