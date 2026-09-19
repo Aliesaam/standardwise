@@ -40,12 +40,12 @@ body {
 }
 
 .brand-logo {
-    height: 90px; /* Keeps the logo big */
+    height: 60px; /* Set directly to 60px to test */
     width: auto;
+    max-height: 100%;
     display: block;
     object-fit: contain;
-    margin-top: -15px; /* Pulls logo up */
-    margin-bottom: -15px; /* Allows logo to spill below the bar */
+    margin: 0;
 }
 .nav-links {
     color: #ffffff;
