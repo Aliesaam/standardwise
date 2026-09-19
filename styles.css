@@ -28,9 +28,10 @@ body {
         radial-gradient(circle at 10% 20%, rgba(98, 172, 255, 0.45) 0%, transparent 45%),
         radial-gradient(circle at 80% 50%, rgba(13, 71, 161, 0.6) 0%, transparent 60%),
         linear-gradient(180deg, #103b82 0%, #031c4a 100%);
-    padding: 10px 0;
+    padding: 6px 0; /* Short background height */
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
+    position: relative;
+    z-index: 10;
 
 .nav-container {
     display: flex;
@@ -39,12 +40,13 @@ body {
 }
 
 .brand-logo {
-    height: 140px;
+    height: 90px; /* Keeps the logo big */
     width: auto;
     display: block;
     object-fit: contain;
+    margin-top: -15px; /* Pulls logo up */
+    margin-bottom: -15px; /* Allows logo to spill below the bar */
 }
-
 .nav-links {
     color: #ffffff;
     font-size: 22px;
