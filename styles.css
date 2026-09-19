@@ -36,9 +36,10 @@ body {
 }
 
 .brand-logo {
-    height: 40px;
+    height: 55px; /* Change this line to 55px */
     width: auto;
     display: block;
+    object-fit: contain; /* Add this line */
 }
 
 .nav-links {
@@ -61,19 +62,28 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 420px;
-    background: url('heropage.png') no-repeat center center/cover;
+    height: 480px; /* Increase height slightly from 420px to 480px */
+    background-image: url('heropage.png');
+    background-size: cover;
+    background-position: right center; /* Add this line to align image to the right */
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
 }
-
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, #031b4e 0%, rgba(3, 27, 78, 0.85) 45%, rgba(3, 27, 78, 0.15) 100%);
+    /* Replace background with this multi-stop gradient */
+    background: linear-gradient(
+        90deg, 
+        #01112b 0%, 
+        rgba(1, 17, 43, 0.92) 40%, 
+        rgba(1, 17, 43, 0.4) 75%, 
+        rgba(1, 17, 43, 0.1) 100%
+    );
 }
 
 .hero-content {
@@ -155,7 +165,7 @@ body {
 }
 
 .footer-logo-img {
-    height: 32px;
+    height: 40px; /* Change this line to 40px */
     width: auto;
     display: block;
 }
