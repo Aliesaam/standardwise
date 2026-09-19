@@ -1,4 +1,4 @@
-﻿/* Base Reset */
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #01296E; /* Updated dark navy background */
+    background-color: #01296e;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -22,11 +22,14 @@ body {
     text-align: center;
 }
 
-/* Header & Navigation */
+/* Header & Navigation with Bright Left Glow */
 .navbar {
-    background-color: #00296a;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(98, 172, 255, 0.45) 0%, transparent 45%),
+        radial-gradient(circle at 80% 50%, rgba(13, 71, 161, 0.6) 0%, transparent 60%),
+        linear-gradient(180deg, #103b82 0%, #031c4a 100%);
     padding: 25px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .nav-container {
@@ -35,33 +38,31 @@ body {
     align-items: center;
 }
 
-/* Bigger Header Logo */
 .brand-logo {
-    height: 140px;
+    height: 95px;
     width: auto;
     display: block;
     object-fit: contain;
 }
 
-/* Larger Navigation Links */
 .nav-links {
     color: #ffffff;
     font-size: 22px;
     font-weight: 600;
 }
 
-    .nav-links a {
-        color: #ffffff;
-        text-decoration: none;
-        margin: 0 12px;
-        transition: opacity 0.3s;
-    }
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 12px;
+    transition: opacity 0.3s;
+}
 
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
+.nav-links a:hover {
+    opacity: 0.8;
+}
 
-/* Hero Section with Wider Image Display */
+/* Hero Section */
 .hero {
     position: relative;
     height: 520px;
@@ -74,7 +75,6 @@ body {
     align-items: center;
 }
 
-/* Smooth Side Overlay for Text Readability */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -83,31 +83,32 @@ body {
     height: 100%;
     background: linear-gradient(
         90deg, 
-        #01296E 0%, 
+        #01296e 0%, 
         rgba(1, 41, 110, 0.88) 42%, 
         rgba(1, 41, 110, 0.3) 78%, 
         rgba(1, 41, 110, 0.05) 100%
     );
 }
+
 .hero-content {
     position: relative;
     z-index: 1;
     max-width: 650px;
 }
 
-    .hero-content h1 {
-        font-size: 38px;
-        font-weight: 700;
-        margin-bottom: 20px;
-        line-height: 1.2;
-        color: #ffffff;
-    }
+.hero-content h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #ffffff;
+}
 
-    .hero-content p {
-        font-size: 15px;
-        color: #d0dcfa;
-        max-width: 520px;
-    }
+.hero-content p {
+    font-size: 15px;
+    color: #d0dcfa;
+    max-width: 520px;
+}
 
 /* Content Sections */
 .about-mission {
@@ -137,26 +138,29 @@ body {
     padding: 30px 0 100px 0;
 }
 
-    .bottom-mission h2 {
-        font-size: 30px;
-        font-weight: 700;
-        margin-bottom: 14px;
-        color: #ffffff;
-    }
+.bottom-mission h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #ffffff;
+}
 
-    .bottom-mission p {
-        font-size: 14px;
-        color: #c4d4f7;
-        max-width: 780px;
-        margin: 0 auto;
-        line-height: 1.6;
-    }
+.bottom-mission p {
+    font-size: 14px;
+    color: #c4d4f7;
+    max-width: 780px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
 
-/* Footer Section */
+/* Footer Section with Bottom-Left Bright Glow */
 .footer {
-    background-color: #041838;
-    padding: 45px 0 30px 0; /* Increased top padding from 35px */
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: 
+        radial-gradient(circle at 12% 85%, rgba(98, 172, 255, 0.5) 0%, transparent 45%),
+        radial-gradient(circle at 85% 30%, rgba(13, 71, 161, 0.5) 0%, transparent 55%),
+        linear-gradient(180deg, #031c4a 0%, #103b82 100%);
+    padding: 45px 0 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .footer-container {
@@ -167,9 +171,8 @@ body {
     gap: 20px;
 }
 
-/* Update this block in styles.css */
 .footer-logo-img {
-    height: 70px; /* Increased from 45px to make it much bigger */
+    height: 70px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -187,19 +190,19 @@ body {
     list-style: none;
 }
 
-    .footer-column ul li {
-        margin-bottom: 5px;
-    }
+.footer-column ul li {
+    margin-bottom: 5px;
+}
 
-        .footer-column ul li a {
-            color: #a7c3f3;
-            text-decoration: none;
-            font-size: 11px;
-        }
+.footer-column ul li a {
+    color: #a7c3f3;
+    text-decoration: none;
+    font-size: 11px;
+}
 
-            .footer-column ul li a:hover {
-                color: #ffffff;
-            }
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
 
 .social-icons a {
     color: #ffffff;
@@ -207,10 +210,7 @@ body {
     text-decoration: none;
 }
 
-/* ========================================================== */
-/* Contact Page Specific Styles                               */
-/* ========================================================== */
-
+/* Contact Page Specific Styles */
 .contact-page {
     padding: 60px 0 80px 0;
 }
@@ -222,13 +222,11 @@ body {
     color: #ffffff;
 }
 
-/* Contact Cards Grid */
 .contact-cards-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px 60px;
-    max-width: 760px;
-    margin: 0 auto 60px auto;
+    margin-bottom: 60px;
 }
 
 .info-card {
@@ -249,21 +247,10 @@ body {
     flex-shrink: 0;
 }
 
-.blue-icon {
-    background-color: #6495ed;
-}
-
-.orange-icon {
-    background-color: #f08080;
-}
-
-.pink-icon {
-    background-color: #ff69b4;
-}
-
-.teal-icon {
-    background-color: #00ced1;
-}
+.blue-icon { background-color: #6495ed; }
+.orange-icon { background-color: #f08080; }
+.pink-icon { background-color: #ff69b4; }
+.teal-icon { background-color: #00ced1; }
 
 .card-details h3 {
     font-size: 18px;
@@ -299,7 +286,6 @@ body {
     text-decoration: underline;
 }
 
-/* Contact Form Container */
 .form-container-box {
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 8px;
@@ -309,11 +295,11 @@ body {
     background-color: rgba(3, 27, 78, 0.4);
 }
 
-    .form-container-box h2 {
-        text-align: center;
-        font-size: 28px;
-        margin-bottom: 8px;
-    }
+.form-container-box h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
 
 .form-subtitle {
     text-align: center;
@@ -333,9 +319,9 @@ body {
     gap: 15px;
 }
 
-    .form-row input {
-        flex: 1;
-    }
+.form-row input {
+    flex: 1;
+}
 
 .contact-form input,
 .contact-form textarea {
@@ -362,9 +348,9 @@ body {
     transition: background 0.3s;
 }
 
-    .btn-submit:hover {
-        background-color: #5b92cb;
-    }
+.btn-submit:hover {
+    background-color: #5b92cb;
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -372,7 +358,7 @@ body {
         flex-direction: column;
         gap: 15px;
     }
-
+    
     .grid-2-col,
     .contact-cards-grid {
         grid-template-columns: 1fr;
