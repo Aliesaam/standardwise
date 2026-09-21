@@ -35,7 +35,7 @@ body {
 }
 
 .brand-logo {
-    height: 90px;
+    height: 45px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -86,7 +86,7 @@ body {
     position: relative;
     z-index: 1;
     max-width: 650px;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
 }
 
@@ -162,7 +162,7 @@ body {
 }
 
 .footer-logo-img {
-    height: 60px;
+    height: 30px;
     width: auto;
     display: block;
     object-fit: contain;
