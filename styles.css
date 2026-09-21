@@ -397,4 +397,13 @@ body {
     .form-wrapper {
         padding: 25px 20px;
     }
+    /* Smooth Page Fade Transition */
+body {
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
 }
