@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #51afe0;
+    overflow: hidden;
+}
+
+.coming-soon {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon img {
+    display: block;
+    width: min(100vw, 800px);
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .coming-soon img {
+        width: 100vw;
+        max-height: 100svh;
+    }
+}
