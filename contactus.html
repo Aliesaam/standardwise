@@ -147,16 +147,21 @@
         </div>
     </footer>
 <script>
+    // Fade page in when DOM loads
     document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('page-loaded');
     });
 
+    // Intercept navigation link clicks for smooth fade-out
     document.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
-            if (href && href.endsWith('.html') && href !== '#') {
+            
+            // Check for relative page links like index.html or contactus.html
+            if (href && !href.startsWith('#') && !href.startsWith('http')) {
                 e.preventDefault();
                 document.body.classList.remove('page-loaded');
+                
                 setTimeout(() => {
                     window.location.href = href;
                 }, 350);
