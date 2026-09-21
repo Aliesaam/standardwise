@@ -104,6 +104,23 @@
             </div>
         </div>
     </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add('page-loaded');
+    });
 
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href.endsWith('.html') && href !== '#') {
+                e.preventDefault();
+                document.body.classList.remove('page-loaded');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 350);
+            }
+        });
+    });
+</script>
 </body>
 </html>
