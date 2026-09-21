@@ -7,11 +7,10 @@
 }
 
 body {
-    background-color: 01296e; /* Darkened background */
+    background-color: #01296E;
     color: #ffffff;
     line-height: 1.6;
 }
-
 .container {
     width: 85%;
     max-width: 1100px;
