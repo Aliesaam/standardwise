@@ -1158,4 +1158,51 @@ img {
 
         text-align: center;
     }
+   /* =========================
+   FIGMA IMAGE CURVES
+   ========================= */
+
+.image-card {
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.image-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.cta-image {
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.cta-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+   @media (max-width: 768px) {
+
+    .image-card {
+        border-radius: 28px;
+    }
+
+    .image-card img {
+        border-radius: 28px;
+    }
+
+    .cta-image {
+        border-radius: 28px;
+    }
+
+    .cta-image img {
+        border-radius: 28px;
+    }
+}
 }
