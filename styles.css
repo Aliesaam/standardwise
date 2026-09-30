@@ -504,11 +504,8 @@ a {
     position: relative;
     z-index: 1;
     width: min(680px, 55%);
-
-    /* THIS CONTROLS HOW HIGH THE TITLE IS */
-    padding: 70px 5% 0;
+    padding: 45px 5% 0;
 }
-
 .site-header + main .hero h1 {
     margin: 0 0 20px;
     font-size: clamp(40px, 4.5vw, 68px);
