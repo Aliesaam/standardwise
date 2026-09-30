@@ -1230,4 +1230,37 @@ body:has(.about-mission) .hero {
     align-items: center;
     overflow: hidden;
 }
+   /* =========================================
+   FINAL IMAGE CURVES
+   ========================================= */
+
+.image-card,
+.cta-image {
+    overflow: hidden !important;
+    border-radius: 30px !important;
+}
+
+.image-card img,
+.cta-image img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 30px !important;
+}
+   @media (max-width: 768px) {
+
+    .image-card,
+    .cta-image {
+        overflow: hidden !important;
+        border-radius: 30px !important;
+    }
+
+    .image-card img,
+    .cta-image img {
+        width: 100% !important;
+        border-radius: 30px !important;
+        display: block !important;
+    }
+}
 }
