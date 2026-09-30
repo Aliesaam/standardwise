@@ -380,68 +380,51 @@ img {
 }
 
 
-/* =========================================================
-   VALUES
-   ========================================================= */
+/* =========================
+   VALUES / 3 CARDS
+   ========================= */
 
 .values {
-    width: 85%;
-
+    width: 100%;
     max-width: 1100px;
-
     margin: 0 auto;
-
-    padding: 55px 0 70px;
+    padding: 38px 40px 28px;
 
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 35px;
+    row-gap: 25px;
 
-    column-gap: 45px;
+    background-color: #002B63;
+    border-radius: 18px;
 
-    row-gap: 35px;
-}
-
-.value {
-    text-align: center;
-
-    padding: 10px;
-}
-
-.value h3 {
     color: #ffffff;
-
-    font-size: 21px;
-
-    font-weight: 700;
-
-    margin-bottom: 10px;
 }
 
-.value p {
-    color: #d1dbe5;
-
-    font-size: 14px;
-
-    line-height: 1.6;
+.values .value {
+    text-align: center;
 }
 
-.services-link {
+.values .value h3 {
+    color: #ffffff;
+    margin: 0 0 20px;
+}
+
+.values .value p {
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.55;
+}
+
+.values .services-link {
     grid-column: 1 / -1;
-
     justify-self: center;
 
-    color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 16px;
-
+    color: #4FA3D1;
     font-weight: 600;
-
-    margin-top: 5px;
-
-    transition: color 0.3s ease;
+    text-decoration: underline;
+    font-size: 18px;
+    margin-top: 2px;
 }
 
 .services-link:hover {
