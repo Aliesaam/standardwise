@@ -1,26 +1,43 @@
 /* =========================================================
    STANDARDWISE
-   COMPLETE STYLESHEET
-   Navbar kept exactly as current version
+   COMPLETE CSS
    ========================================================= */
 
 
 /* =========================================================
-   BASE RESET
+   RESET
    ========================================================= */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #01296E;
+    margin: 0;
+    background: #01296E;
     color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
 }
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   SHARED CONTAINER
+   ========================================================= */
 
 .container {
     width: 85%;
@@ -34,8 +51,83 @@ body {
 
 
 /* =========================================================
-   NAVBAR
-   DO NOT CHANGE
+   HOME NAVBAR
+   SAME VISUAL STYLE AS CONTACT US
+   ========================================================= */
+
+.site-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 5%;
+
+    background: linear-gradient(
+        90deg,
+        #18529e 0%,
+        #062b68 50%,
+        #031b47 100%
+    );
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    position: relative;
+    z-index: 20;
+}
+
+.site-header .brand {
+    display: block;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+.site-header .brand img {
+    height: 45px;
+    width: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.site-header .main-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 0;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.site-header .main-nav a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    margin: 0 10px;
+
+    transition: color 0.3s ease;
+}
+
+.site-header .main-nav a:hover {
+    color: #6495ed;
+}
+
+.site-header .main-nav span {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   CONTACT / ABOUT NAVBAR
+   KEEP CURRENT STYLE
    ========================================================= */
 
 .navbar {
@@ -53,27 +145,37 @@ body {
 
 .nav-container {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 }
 
 .brand-logo {
     height: 45px;
+
     width: auto;
+
     display: block;
+
     object-fit: contain;
 }
 
 .nav-links {
     color: #ffffff;
+
     font-size: 16px;
+
     font-weight: 500;
 }
 
 .nav-links a {
     color: #ffffff;
+
     text-decoration: none;
+
     margin: 0 10px;
+
     transition: color 0.3s;
 }
 
@@ -83,8 +185,7 @@ body {
 
 
 /* =========================================================
-   HOME PAGE
-   HERO
+   HOME HERO
    ========================================================= */
 
 .hero {
@@ -92,70 +193,88 @@ body {
 
     height: 455px;
 
-    background-image: url("home.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    overflow: hidden;
 
     display: flex;
+
     align-items: flex-start;
 
-    overflow: hidden;
+    background: #01296E;
+}
+
+.hero-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    z-index: 0;
 }
 
 .hero-overlay {
     position: absolute;
 
-    top: 0;
-    left: 0;
+    inset: 0;
 
     width: 100%;
     height: 100%;
 
+    z-index: 1;
+
     background: linear-gradient(
         90deg,
-        #01296e 0%,
-        rgba(1, 41, 110, 0.94) 38%,
-        rgba(1, 41, 110, 0.68) 55%,
-        rgba(1, 41, 110, 0.25) 78%,
-        rgba(1, 41, 110, 0.05) 100%
+        #01296E 0%,
+        rgba(1, 41, 110, 0.96) 30%,
+        rgba(1, 41, 110, 0.78) 48%,
+        rgba(1, 41, 110, 0.38) 72%,
+        rgba(1, 41, 110, 0.08) 100%
     );
 }
 
 .hero-content {
     position: relative;
+
     z-index: 2;
 
     width: 560px;
+
     max-width: 560px;
 
     margin-left: 25.5%;
-    margin-right: auto;
 
     padding-top: 68px;
 }
 
 .hero-content h1 {
-    font-size: 62px;
-    line-height: 1.07;
-    font-weight: 700;
-
     color: #ffffff;
 
-    max-width: 560px;
+    font-size: 62px;
 
-    margin-bottom: 20px;
+    line-height: 1.07;
+
+    font-weight: 700;
+
+    margin: 0 0 20px;
+
+    max-width: 560px;
 }
 
 .hero-content p {
-    font-size: 16px;
-    line-height: 1.65;
-
     color: #ffffff;
+
+    font-size: 16px;
+
+    line-height: 1.65;
 
     max-width: 560px;
 
-    margin-bottom: 25px;
+    margin: 0 0 25px;
 }
 
 
@@ -163,82 +282,94 @@ body {
    HERO BUTTON
    ========================================================= */
 
-.hero-btn {
+.primary-btn {
     display: inline-block;
 
     padding: 13px 18px;
 
-    background-color: #69a3e3;
-    color: #ffffff;
+    background: #69a3e3;
 
-    border-radius: 4px;
+    color: #ffffff;
 
     text-decoration: none;
 
+    border-radius: 4px;
+
     font-size: 13px;
+
     font-weight: 600;
 
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease;
 }
 
-.hero-btn:hover {
-    background-color: #538ecf;
+.primary-btn:hover {
+    background: #538ecf;
 }
 
 
 /* =========================================================
-   HOME PAGE
-   FINANCIAL EXPERTISE SECTION
+   HOME EXPERTISE SECTION
    ========================================================= */
 
-.intro-section {
-    background-color: #0b367d;
-
-    padding: 62px 0;
-}
-
-.intro-container {
+.expertise {
     width: 85%;
+
     max-width: 1100px;
 
     margin: 0 auto;
+
+    min-height: 330px;
+
+    padding: 65px 0;
 
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 70px;
-
     align-items: center;
+
+    gap: 70px;
 }
 
-.intro-text h2 {
+.expertise-text {
+    max-width: 560px;
+}
+
+.expertise-text h2 {
+    color: #ffffff;
+
     font-size: 38px;
+
     line-height: 1.2;
 
     font-weight: 700;
 
-    color: #ffffff;
-
     margin-bottom: 20px;
 }
 
-.intro-text p {
+.expertise-text p {
+    color: #ffffff;
+
     font-size: 16px;
+
     line-height: 1.8;
 
-    color: #ffffff;
+    margin: 0;
 }
 
-.intro-image {
+.image-card {
+    width: 100%;
+
     display: flex;
 
-    justify-content: center;
     align-items: center;
+
+    justify-content: center;
 }
 
-.intro-image img {
+.image-card img {
     width: 100%;
+
     max-width: 500px;
 
     height: auto;
@@ -250,74 +381,65 @@ body {
 
 
 /* =========================================================
-   HOME PAGE
    VALUES
    ========================================================= */
 
-.values-section {
-    background-color: #01296E;
-
-    padding: 65px 0;
-}
-
-.values-container {
+.values {
     width: 85%;
+
     max-width: 1100px;
 
     margin: 0 auto;
+
+    padding: 55px 0 70px;
 
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 35px;
+    column-gap: 45px;
+
+    row-gap: 35px;
 }
 
-.value-card {
+.value {
     text-align: center;
 
-    padding: 20px;
+    padding: 10px;
 }
 
-.value-card h3 {
+.value h3 {
+    color: #ffffff;
+
     font-size: 21px;
 
-    margin-bottom: 10px;
+    font-weight: 700;
 
-    color: #ffffff;
+    margin-bottom: 10px;
 }
 
-.value-card p {
-    font-size: 14px;
-
+.value p {
     color: #d1dbe5;
+
+    font-size: 14px;
 
     line-height: 1.6;
 }
 
-
-/* =========================================================
-   HOME PAGE
-   SERVICES CTA
-   ========================================================= */
-
-.services-link-section {
-    background-color: #01296E;
-
-    text-align: center;
-
-    padding: 20px 0 65px;
-}
-
 .services-link {
-    display: inline-block;
+    grid-column: 1 / -1;
+
+    justify-self: center;
 
     color: #ffffff;
 
     text-decoration: none;
 
     font-size: 16px;
+
     font-weight: 600;
+
+    margin-top: 5px;
 
     transition: color 0.3s ease;
 }
@@ -328,21 +450,17 @@ body {
 
 
 /* =========================================================
-   HOME PAGE
-   FINAL CTA
+   HOME CTA
    ========================================================= */
 
-.home-cta {
-    background-color: #0b367d;
-
-    padding: 70px 0;
-}
-
-.home-cta-container {
+.cta {
     width: 85%;
+
     max-width: 1100px;
 
     margin: 0 auto;
+
+    padding: 70px 0;
 
     display: grid;
 
@@ -353,38 +471,65 @@ body {
     align-items: center;
 }
 
-.home-cta-image img {
-    width: 100%;
-    max-width: 500px;
+.cta-image {
+    display: flex;
 
-    display: block;
+    justify-content: center;
 
-    margin: 0 auto;
+    align-items: center;
 }
 
-.home-cta-content h2 {
-    font-size: 38px;
-    line-height: 1.2;
+.cta-image img {
+    width: 100%;
 
+    max-width: 500px;
+
+    height: auto;
+
+    display: block;
+}
+
+.cta-text {
+    max-width: 560px;
+}
+
+.cta-text h2 {
     color: #ffffff;
+
+    font-size: 38px;
+
+    line-height: 1.2;
 
     margin-bottom: 20px;
 }
 
-.home-cta-content p {
-    font-size: 16px;
-
+.cta-text p {
     color: #d1dbe5;
+
+    font-size: 16px;
 
     line-height: 1.7;
 
     margin-bottom: 25px;
 }
 
+.text-link {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.text-link:hover {
+    color: #69a3e3;
+}
+
 
 /* =========================================================
-   OLD ABOUT US CONTENT
-   Kept so About Us page does not break
+   ABOUT US
    ========================================================= */
 
 .about-mission {
@@ -762,20 +907,117 @@ body {
 
 
 /* =========================================================
+   HOME FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: linear-gradient(
+        90deg,
+        #18529e 0%,
+        #062b68 50%,
+        #031b47 100%
+    );
+
+    padding: 40px 5% 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr 1.4fr;
+
+    gap: 40px;
+
+    position: relative;
+}
+
+.site-footer .footer-brand img {
+    height: 40px;
+
+    width: auto;
+
+    display: block;
+}
+
+.site-footer .footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.site-footer .footer-column h4 {
+    color: #ffffff;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 7px;
+}
+
+.site-footer .footer-column a,
+.site-footer .footer-column span {
+    color: #a0b3ce;
+
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+.site-footer .footer-column a:hover {
+    color: #ffffff;
+}
+
+.site-footer .footer-bottom {
+    grid-column: 1 / -1;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    padding-top: 15px;
+
+    margin-top: 10px;
+
+    color: #a0b3ce;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 768px) {
 
-    /* Navbar remains same structure */
+    /* Navbar */
+    .site-header {
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 15px 20px;
+    }
+
+    .site-header .main-nav {
+        font-size: 14px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .site-header .main-nav a {
+        margin: 0 5px;
+    }
+
     .nav-container {
         flex-direction: column;
 
         gap: 10px;
-    }
-
-    .brand-logo {
-        height: 45px;
     }
 
     .nav-links {
@@ -789,19 +1031,17 @@ body {
     }
 
 
-    /* Home Hero */
+    /* Hero */
     .hero {
         height: 520px;
-
-        background-position: center center;
     }
 
     .hero-content {
         width: auto;
+
         max-width: none;
 
         margin-left: 0;
-        margin-right: 0;
 
         padding: 50px 25px 0;
     }
@@ -818,51 +1058,47 @@ body {
         font-size: 15px;
 
         line-height: 1.6;
-
-        max-width: 500px;
     }
 
 
-    /* Home Intro */
-    .intro-section {
-        padding: 50px 0;
-    }
-
-    .intro-container {
+    /* Expertise */
+    .expertise {
         grid-template-columns: 1fr;
 
         gap: 35px;
+
+        padding: 50px 0;
     }
 
-    .intro-text h2 {
+    .expertise-text h2 {
         font-size: 32px;
     }
 
 
     /* Values */
-    .values-section {
-        padding: 50px 0;
-    }
-
-    .values-container {
+    .values {
         grid-template-columns: 1fr;
 
         gap: 20px;
+
+        padding: 45px 0 55px;
+    }
+
+    .services-link {
+        grid-column: auto;
     }
 
 
-    /* Final CTA */
-    .home-cta {
-        padding: 50px 0;
-    }
-
-    .home-cta-container {
+    /* CTA */
+    .cta {
         grid-template-columns: 1fr;
 
         gap: 35px;
+
+        padding: 50px 0;
     }
 
-    .home-cta-content h2 {
+    .cta-text h2 {
         font-size: 32px;
     }
 
@@ -920,23 +1156,23 @@ body {
 
 
     /* Footer */
+    .site-footer {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        justify-items: center;
+    }
+
+    .site-footer .footer-bottom {
+        grid-column: auto;
+    }
+
     .footer-container {
         flex-direction: column;
 
         align-items: center;
 
         text-align: center;
-    }
-
-
-    /* Page fade */
-    body {
-        opacity: 0;
-
-        transition: opacity 0.35s ease-in-out;
-    }
-
-    body.page-loaded {
-        opacity: 1;
     }
 }
