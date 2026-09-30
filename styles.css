@@ -1207,4 +1207,42 @@ a {
         font-size: 32px;
     }
 }
+   /* =========================
+   HOME PAGE HERO
+   ========================= */
+
+.hero {
+    height: 455px !important;
+    min-height: 455px !important;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px !important;
+
+    margin-left: 25.5% !important;
+    margin-right: auto !important;
+
+    padding-top: 68px !important;
+}
+
+.hero-content h1 {
+    font-size: 62px !important;
+    line-height: 1.07 !important;
+    font-weight: 700 !important;
+
+    margin: 0 0 20px !important;
+
+    max-width: 560px !important;
+}
+
+.hero-content p {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+
+    max-width: 560px !important;
+}
 }
