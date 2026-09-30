@@ -507,10 +507,10 @@ a {
     padding: 45px 5% 0;
 }
 .site-header + main .hero h1 {
-    margin: 0 0 20px;
-    font-size: clamp(40px, 4.5vw, 68px);
+    font-size: 56px;
     line-height: 1.08;
-    letter-spacing: -.7px;
+    margin: 0 0 20px;
+    max-width: 650px;
 }
 
 .site-header + main .hero p {
