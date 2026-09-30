@@ -1221,4 +1221,13 @@ img {
         border-radius: 28px;
     }
 }
+   /* ABOUT US HERO IMAGE */
+body:has(.about-mission) .hero {
+    position: relative;
+    height: 420px;
+    background: url("heropage.png") no-repeat right center / cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
 }
