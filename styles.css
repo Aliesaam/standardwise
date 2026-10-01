@@ -1263,58 +1263,127 @@ body:has(.about-mission) .hero {
         display: block !important;
     }
 }
- /* =========================================
-   ABOUT US HERO - FINAL
+/* =========================================
+   ABOUT US HERO
    ========================================= */
 
 .about-hero {
-    position: relative !important;
-    width: 100% !important;
-    height: 420px !important;
-
-    background-color: #01296E !important;
-    background-image: url("heropage.png") !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center center !important;
-
-    display: flex !important;
-    align-items: center !important;
-    overflow: hidden !important;
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    background: #01296E;
 }
 
-.about-hero .hero-overlay {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 1 !important;
+/* IMAGE ON THE RIGHT */
+.about-hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    z-index: 0;
 }
 
-.about-hero .hero-content {
-    position: relative !important;
-    z-index: 2 !important;
+/* BLUE OVERLAY */
+.about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(
+        90deg,
+        #01296E 0%,
+        #01296E 30%,
+        rgba(1, 41, 110, 0.92) 48%,
+        rgba(1, 41, 110, 0.45) 70%,
+        rgba(1, 41, 110, 0.05) 100%
+    );
+}
+
+/* TEXT ON THE LEFT */
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 650px;
+
+    margin-left: 21%;
+    margin-right: auto;
+}
+
+/* TITLE */
+.about-hero-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+
+    color: #ffffff;
+
+    margin-bottom: 18px;
+}
+
+/* DESCRIPTION */
+.about-hero-content p {
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #e0e6ed;
+
+    max-width: 520px;
 }
 
 
-/* Make sure it stays visible on laptop */
-@media (min-width: 769px) {
-    .about-hero {
-        height: 420px !important;
-        background-image: url("heropage.png") !important;
-        background-size: cover !important;
-        background-position: center center !important;
-    }
-}
+/* =========================================
+   MOBILE
+   ========================================= */
 
-
-/* Make sure it stays visible on mobile */
 @media (max-width: 768px) {
+
     .about-hero {
-        height: 600px !important;
-        background-image: url("heropage.png") !important;
-        background-size: cover !important;
-        background-position: center center !important;
+        height: 600px;
+    }
+
+    .about-hero-image {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+    }
+
+    .about-hero-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(1, 41, 110, 0.35) 0%,
+            rgba(1, 41, 110, 0.85) 55%,
+            #01296E 100%
+        );
+    }
+
+    .about-hero-content {
+        margin-left: 8%;
+        margin-right: 8%;
+        max-width: none;
+
+        justify-content: center;
+    }
+
+    .about-hero-content h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .about-hero-content p {
+        font-size: 17px;
+        line-height: 1.6;
     }
 }
 }
