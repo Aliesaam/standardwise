@@ -1263,15 +1263,16 @@ body:has(.about-mission) .hero {
         display: block !important;
     }
 }
-  /* ================================
-   ABOUT US HERO
-   ================================ */
+ /* =========================================
+   ABOUT US HERO - FINAL
+   ========================================= */
 
 .about-hero {
     position: relative !important;
     width: 100% !important;
     height: 420px !important;
 
+    background-color: #01296E !important;
     background-image: url("heropage.png") !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
@@ -1285,11 +1286,35 @@ body:has(.about-mission) .hero {
 .about-hero .hero-overlay {
     position: absolute !important;
     inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
     z-index: 1 !important;
 }
 
 .about-hero .hero-content {
     position: relative !important;
     z-index: 2 !important;
+}
+
+
+/* Make sure it stays visible on laptop */
+@media (min-width: 769px) {
+    .about-hero {
+        height: 420px !important;
+        background-image: url("heropage.png") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+}
+
+
+/* Make sure it stays visible on mobile */
+@media (max-width: 768px) {
+    .about-hero {
+        height: 600px !important;
+        background-image: url("heropage.png") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+    }
 }
 }
