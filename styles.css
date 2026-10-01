@@ -1337,7 +1337,7 @@ body:has(.about-mission) .hero-image {
     top: 0 !important;
     right: 0 !important;
 
-    width: 50% !important;
+    width: 100% !important;
     height: 100% !important;
 
     z-index: 2 !important;
