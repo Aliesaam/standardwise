@@ -1264,22 +1264,28 @@ body:has(.about-mission) .hero {
     }
 }
 /* =========================================
-   FINAL ABOUT HERO
+   DESKTOP HERO FIX
    ========================================= */
 
-/* IMAGE - RIGHT */
+.hero {
+    position: relative !important;
+    width: 100% !important;
+    height: 450px !important;
+    overflow: hidden !important;
+    background: #01296E !important;
+    display: flex !important;
+    align-items: center !important;
+}
 
-/* TEXT - LEFT */
+.hero-container {
+    position: relative !important;
+    z-index: 5 !important;
+}
 
 .hero-text {
-    position: absolute !important;
-    left: 8% !important;
-    top: 0 !important;
-    width: 45% !important;
-    height: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 550px !important;
     z-index: 5 !important;
 }
 
@@ -1295,19 +1301,17 @@ body:has(.about-mission) .hero {
     color: #ffffff !important;
     font-size: 15px !important;
     line-height: 1.6 !important;
-    max-width: 560px !important;
     margin: 0 !important;
 }
 
-
-/* IMAGE - FULL SPAN (RIGHT-ALIGNED CONTENT) */
+/* IMAGE - SPANS FULL HEIGHT ON RIGHT */
 
 .hero-image {
     position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 65% !important;
     height: 100% !important;
-    overflow: hidden !important;
     z-index: 1 !important;
 }
 
@@ -1318,7 +1322,6 @@ body:has(.about-mission) .hero {
     object-fit: cover !important;
     object-position: right center !important;
 }
-
 
 /* =========================================
    MOBILE
