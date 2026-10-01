@@ -1292,31 +1292,21 @@ img {
 
     .
 }
-/* =========================================
-   ABOUT US HERO
-   ========================================= */
+/* ABOUT US HERO - FINAL */
 
 body:has(.about-mission) .hero {
     position: relative !important;
     width: 100% !important;
     height: 420px !important;
-
-    display: block !important;
-
     overflow: hidden !important;
-
     background: #01296E !important;
+    display: block !important;
 }
-
-
-/* TEXT */
 
 body:has(.about-mission) .hero-text {
     position: absolute !important;
-
     left: 13.2% !important;
     top: 0 !important;
-
     width: 48% !important;
     height: 100% !important;
 
@@ -1325,69 +1315,43 @@ body:has(.about-mission) .hero-text {
     justify-content: center !important;
 
     z-index: 10 !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
 }
-
 
 body:has(.about-mission) .hero-text h1 {
-    color: #ffffff !important;
-
+    color: white !important;
     font-size: 32px !important;
-    font-weight: 700 !important;
-
     line-height: 1.25 !important;
-
     margin: 0 0 18px 0 !important;
-
-    max-width: 560px !important;
 }
-
 
 body:has(.about-mission) .hero-text p {
-    color: #ffffff !important;
-
+    color: white !important;
     font-size: 15px !important;
-
     line-height: 1.6 !important;
-
     max-width: 560px !important;
-
     margin: 0 !important;
 }
-
-
-/* IMAGE */
 
 body:has(.about-mission) .hero-image {
     position: absolute !important;
-
     top: 0 !important;
     right: 0 !important;
 
     width: 50% !important;
     height: 100% !important;
 
-    display: block !important;
-
-    overflow: hidden !important;
-
     z-index: 2 !important;
+    overflow: hidden !important;
 }
-
 
 body:has(.about-mission) .hero-image img {
     width: 100% !important;
     height: 100% !important;
-
     display: block !important;
 
     object-fit: cover !important;
     object-position: center !important;
 }
-
-
 /* MOBILE */
 
 @media (max-width: 768px) {
