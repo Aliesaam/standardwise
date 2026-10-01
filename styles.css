@@ -1267,77 +1267,26 @@ body:has(.about-mission) .hero {
    FINAL ABOUT HERO
    ========================================= */
 
-.hero {
-    position: relative !important;
-    width: 100% !important;
-    height: 420px !important;
-    overflow: hidden !important;
-    background: #01296E !important;
-
-    display: block !important;
-}
-
-
-/* TEXT - LEFT */
-
-.hero-text {
-    position: absolute !important;
-    left: 21% !important;
-    top: 0 !important;
-
-    width: 42% !important;
-    height: 100% !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-
-    z-index: 5 !important;
-}
-
-.hero-text h1 {
-    color: #ffffff !important;
-    font-size: 32px !important;
-    font-weight: 700 !important;
-    line-height: 1.25 !important;
-
-    margin: 0 0 18px 0 !important;
-}
-
-.hero-text p {
-    color: #ffffff !important;
-    font-size: 15px !important;
-    line-height: 1.6 !important;
-
-    max-width: 560px !important;
-    margin: 0 !important;
-}
-
-
 /* IMAGE - RIGHT */
 
 .hero-image {
     position: absolute !important;
-
     top: 0 !important;
     right: 0 !important;
-
     width: 50% !important;
     height: 100% !important;
-
     overflow: hidden !important;
-
     z-index: 1 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
 }
 
 .hero-image img {
     width: 100% !important;
     height: 100% !important;
-
     display: block !important;
-
     object-fit: cover !important;
-    object-position: center !important;
+    object-position: right center !important;
 }
 
 
