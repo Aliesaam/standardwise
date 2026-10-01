@@ -272,17 +272,17 @@ img {
 .primary-btn {
     display: inline-block;
 
-    padding: 15px 22px;
+    padding: 16px 32px;
 
-    background: #568fcf;
+    background: #3478ed;
 
     color: #ffffff;
 
     text-decoration: none;
 
-    border-radius: 4px;
+    border-radius: 18px;
 
-    font-size: 14px;
+    font-size: 16px;
 
     font-weight: 600;
 
