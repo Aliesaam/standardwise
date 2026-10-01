@@ -1221,15 +1221,7 @@ img {
         border-radius: 28px;
     }
 }
-   /* ABOUT US HERO IMAGE */
-body:has(.about-mission) .hero {
-    position: relative;
-    height: 420px;
-    background: url("heropage.png") no-repeat right center / cover;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
+  
    /* =========================================
    FINAL IMAGE CURVES
    ========================================= */
@@ -1263,65 +1255,7 @@ body:has(.about-mission) .hero {
         display: block !important;
     }
 }
-/* =========================================
-   FINAL ABOUT HERO (LAPTOP / DESKTOP)
-   ========================================= */
 
-.hero {
-    position: relative !important;
-    width: 100% !important;
-    height: 420px !important;
-    overflow: hidden !important;
-    background: #01296E !important;
-    display: flex !important;
-    align-items: center !important;
-}
-
-/* TEXT - LEFT ALIGNED TO MATCH GRID BELOW */
-
-.hero-text {
-    position: relative !important;
-    z-index: 5 !important;
-    width: 85% !important;
-    max-width: 1100px !important;
-    margin: 0 auto !important;
-}
-
-.hero-text h1 {
-    color: #ffffff !important;
-    font-size: 32px !important;
-    font-weight: 700 !important;
-    line-height: 1.25 !important;
-    margin: 0 0 18px 0 !important;
-    max-width: 520px !important;
-}
-
-.hero-text p {
-    color: #ffffff !important;
-    font-size: 15px !important;
-    line-height: 1.6 !important;
-    max-width: 520px !important;
-    margin: 0 !important;
-}
-
-/* IMAGE - PINNED TO RIGHT HALF */
-
-.hero-image {
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    width: 55% !important;
-    height: 100% !important;
-    z-index: 1 !important;
-}
-
-.hero-image img {
-    width: 100% !important;
-    height: 100% !important;
-    display: block !important;
-    object-fit: cover !important;
-    object-position: right center !important;
-}
 /* =========================================
    MOBILE
    ========================================= */
@@ -1357,5 +1291,128 @@ body:has(.about-mission) .hero {
 }
 
     .
+}
+/* =========================================
+   ABOUT US HERO
+   ========================================= */
+
+body:has(.about-mission) .hero {
+    position: relative !important;
+    width: 100% !important;
+    height: 420px !important;
+
+    display: block !important;
+
+    overflow: hidden !important;
+
+    background: #01296E !important;
+}
+
+
+/* TEXT */
+
+body:has(.about-mission) .hero-text {
+    position: absolute !important;
+
+    left: 13.2% !important;
+    top: 0 !important;
+
+    width: 48% !important;
+    height: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+
+    z-index: 10 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+body:has(.about-mission) .hero-text h1 {
+    color: #ffffff !important;
+
+    font-size: 32px !important;
+    font-weight: 700 !important;
+
+    line-height: 1.25 !important;
+
+    margin: 0 0 18px 0 !important;
+
+    max-width: 560px !important;
+}
+
+
+body:has(.about-mission) .hero-text p {
+    color: #ffffff !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.6 !important;
+
+    max-width: 560px !important;
+
+    margin: 0 !important;
+}
+
+
+/* IMAGE */
+
+body:has(.about-mission) .hero-image {
+    position: absolute !important;
+
+    top: 0 !important;
+    right: 0 !important;
+
+    width: 50% !important;
+    height: 100% !important;
+
+    display: block !important;
+
+    overflow: hidden !important;
+
+    z-index: 2 !important;
+}
+
+
+body:has(.about-mission) .hero-image img {
+    width: 100% !important;
+    height: 100% !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    body:has(.about-mission) .hero {
+        height: 600px !important;
+    }
+
+    body:has(.about-mission) .hero-image {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    body:has(.about-mission) .hero-text {
+        left: 8% !important;
+        width: 84% !important;
+        height: 100% !important;
+    }
+
+    body:has(.about-mission) .hero-text h1 {
+        font-size: 34px !important;
+    }
+
+    body:has(.about-mission) .hero-text p {
+        font-size: 17px !important;
+    }
 }
 }
