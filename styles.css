@@ -1366,7 +1366,7 @@ body:has(.about-mission) .hero-image img {
         font-size: 17px !important;
     }
 }
-   .whatsapp-float {
+  .whatsapp-float {
     position: fixed;
     right: 25px;
     bottom: 25px;
@@ -1383,8 +1383,6 @@ body:has(.about-mission) .hero-image img {
     align-items: center;
     justify-content: center;
 
-    font-size: 30px;
-
     text-decoration: none;
 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -1392,6 +1390,12 @@ body:has(.about-mission) .hero-image img {
     z-index: 9999;
 
     transition: transform 0.2s ease;
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
 }
 
 .whatsapp-float:hover {
@@ -1403,7 +1407,11 @@ body:has(.about-mission) .hero-image img {
         height: 50px;
         right: 18px;
         bottom: 18px;
-        font-size: 26px;
+    }
+
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
     }
 }
 }
