@@ -1396,8 +1396,8 @@ body:has(.about-mission) .hero-image img {
     width: 32px;
     height: 32px;
     fill: white;
+    transform: translateY(-2px);
 }
-
 .whatsapp-float:hover {
     transform: scale(1.08);
 }
