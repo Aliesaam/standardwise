@@ -1410,8 +1410,10 @@ body:has(.about-mission) .hero-image img {
     }
 
     .whatsapp-float svg {
-        width: 28px;
-        height: 28px;
-    }
+    width: 32px;
+    height: 32px;
+    fill: white;
+    transform: translateY(-2px);
+}
 }
 }
