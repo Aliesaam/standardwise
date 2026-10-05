@@ -517,3 +517,16 @@ img {
 .services-dropdown-wrapper:hover .services-arrow {
     transform: rotate(180deg);
 }
+/* Dropdown text color fix */
+
+.nav-links .services-dropdown a,
+.nav-links .services-dropdown a:visited {
+    color: #26364a !important;
+    background: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.nav-links .services-dropdown a:hover {
+    color: #002454 !important;
+    background: #f2f5f9 !important;
+}
