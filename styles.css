@@ -1487,4 +1487,42 @@ body:has(.about-mission) .hero-image img {
         transition: none;
     }
 }
+   /* =========================================================
+   EXPERTISE ANIMATION FIX
+   ========================================================= */
+
+.expertise {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    align-items: center !important;
+}
+
+/* Text stays in the LEFT column */
+.expertise-text {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+}
+
+/* Image stays in the RIGHT column */
+.expertise .image-card {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+}
+
+/* Animation from RIGHT */
+.expertise-text.scroll-right,
+.expertise .image-card.scroll-right {
+    opacity: 0;
+    transform: translateX(70px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+/* Final position */
+.expertise-text.scroll-right.show,
+.expertise .image-card.scroll-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
 }
