@@ -1,0 +1,340 @@
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #01296E;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background: #002454;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   TAX HERO
+   ========================================================= */
+
+.tax-hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.tax-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tax-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 36, 84, 0.05),
+        rgba(0, 36, 84, 0.45)
+    );
+}
+
+.tax-hero-content {
+    position: absolute;
+    left: 8%;
+    bottom: 35px;
+    z-index: 2;
+}
+
+.tax-hero-content h1 {
+    margin: 0;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TAX CONTENT
+   ========================================================= */
+
+.tax-content-section {
+    width: 100%;
+    background: #01296E;
+    padding: 25px 0 70px;
+}
+
+.tax-content {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.tax-content p {
+    margin: 0 0 24px;
+    color: white;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   PARAGRAPH TRANSITION
+   ========================================================= */
+
+.scroll-bottom {
+    opacity: 0;
+    transform: translateY(60px);
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.scroll-bottom.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        #0a397d,
+        #7bb5e6
+    );
+    padding: 45px 0 35px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.footer-logo-img {
+    width: 170px;
+    height: auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.footer-column h4 {
+    margin: 0 0 10px;
+    color: white;
+    font-size: 12px;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.footer-column a:hover {
+    opacity: 0.75;
+}
+
+.footer-socials a {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: white;
+    color: #01296E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    z-index: 9999;
+    transition: transform .2s ease;
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 55px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .brand-logo {
+        width: 105px;
+    }
+
+    .nav-links {
+        gap: 3px;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+    }
+
+    .tax-hero {
+        height: 180px;
+    }
+
+    .tax-hero-content {
+        left: 7%;
+        bottom: 22px;
+    }
+
+    .tax-hero-content h1 {
+        font-size: 25px;
+    }
+
+    .tax-content-section {
+        padding: 18px 0 50px;
+    }
+
+    .tax-content {
+        width: 90%;
+    }
+
+    .tax-content p {
+        font-size: 11px;
+        line-height: 1.55;
+        margin-bottom: 18px;
+    }
+
+    .footer {
+        padding: 30px 0 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .footer-logo-img {
+        width: 90px;
+    }
+
+    .footer-column h4 {
+        font-size: 7px;
+    }
+
+    .footer-column a {
+        font-size: 6px;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+    }
+}
