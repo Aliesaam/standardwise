@@ -1,0 +1,370 @@
+/* =========================================================
+   STANDARDWISE BOOKKEEPING & ACCOUNTING PAGE
+   Shared navbar/footer matched to Home page
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #01296E;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =========================================================
+   NAVBAR: SAME STYLE AS HOME
+   ========================================================= */
+.navbar {
+    width: 100%;
+    background: linear-gradient(90deg, #18529e 0%, #062b68 50%, #031b47 100%);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+    z-index: 20;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.navbar .logo a {
+    display: block;
+    text-decoration: none;
+}
+
+.navbar .brand-logo {
+    height: 45px;
+    width: auto;
+    max-width: none;
+    display: block;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #6495ed;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.service-hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #01296E;
+}
+
+.service-hero > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 43, 115, 0.05) 30%,
+        rgba(0, 43, 115, 0.75) 100%
+    );
+}
+
+.service-hero h1 {
+    position: absolute;
+    left: 7%;
+    bottom: 28px;
+    margin: 0;
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 34px;
+    line-height: 1.1;
+    font-weight: 700;
+    z-index: 2;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+.service-content {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 0 70px;
+}
+
+.service-content p {
+    margin: 0 0 28px;
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.service-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   SCROLL ANIMATION
+   ========================================================= */
+.scroll-bottom {
+    opacity: 0;
+    transform: translateY(55px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-bottom.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.05s; }
+.delay-2 { transition-delay: 0.15s; }
+.delay-3 { transition-delay: 0.25s; }
+.delay-4 { transition-delay: 0.35s; }
+.delay-5 { transition-delay: 0.45s; }
+
+/* =========================================================
+   FOOTER: SAME STYLE AS HOME
+   ========================================================= */
+.footer {
+    width: 100%;
+    background: linear-gradient(90deg, #18529e 0%, #062b68 50%, #031b47 100%);
+    padding: 35px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo {
+    flex-shrink: 0;
+}
+
+.footer-logo-img {
+    height: 30px;
+    width: auto;
+    max-width: none;
+    display: block;
+    object-fit: contain;
+}
+
+.footer-column h4 {
+    margin: 0 0 8px;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 4px;
+}
+
+.footer-column ul li a {
+    color: #a0b3ce;
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #6495ed;
+}
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: #ffffff;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .nav-container {
+        width: 85%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar .brand-logo {
+        height: 45px;
+    }
+
+    .nav-links {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .nav-links a {
+        margin: 0 5px;
+    }
+
+    .service-hero {
+        height: 220px;
+    }
+
+    .service-hero h1 {
+        left: 5%;
+        bottom: 20px;
+        font-size: 27px;
+    }
+
+    .service-content {
+        width: 90%;
+        padding: 35px 0 50px;
+    }
+
+    .service-content p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 22px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .service-hero {
+        height: 180px;
+    }
+
+    .service-hero h1 {
+        font-size: 24px;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-bottom {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
