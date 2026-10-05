@@ -1416,4 +1416,75 @@ body:has(.about-mission) .hero-image img {
     
 }
 }
+   /* =========================================
+   HOME PAGE SCROLL ANIMATIONS
+   ========================================= */
+
+/* Initial hidden states */
+
+.scroll-left,
+.scroll-right,
+.scroll-bottom {
+    opacity: 0;
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+/* Text comes from the LEFT */
+.scroll-left {
+    transform: translateX(-70px);
+}
+
+/* Image comes from the RIGHT */
+.scroll-right {
+    transform: translateX(70px);
+}
+
+/* Sections come from the BOTTOM */
+.scroll-bottom {
+    transform: translateY(60px);
+}
+
+
+/* When element enters the screen */
+
+.scroll-left.show,
+.scroll-right.show,
+.scroll-bottom.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* Slight delays for a smoother sequence */
+
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.25s;
+}
+
+.delay-3 {
+    transition-delay: 0.4s;
+}
+
+.delay-4 {
+    transition-delay: 0.55s;
+}
+
+
+/* Respect users who prefer reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-left,
+    .scroll-right,
+    .scroll-bottom {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
 }
