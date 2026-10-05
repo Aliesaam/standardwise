@@ -1525,4 +1525,26 @@ body:has(.about-mission) .hero-image img {
     opacity: 1;
     transform: translateX(0);
 }
+   /* =========================================================
+   EXPERTISE SECTION ANIMATION
+   ========================================================= */
+
+.expertise .expertise-text,
+.expertise .image-card {
+    opacity: 0;
+    transform: translateX(70px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+/* When visible */
+.expertise .expertise-text.show,
+.expertise .image-card.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Image starts slightly after the text */
+.expertise .image-card {
+    transition-delay: 0.15s;
+}
 }
