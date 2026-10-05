@@ -380,33 +380,27 @@ img {
 
 /* Dropdown box */
 .services-dropdown {
-    position: absolute;
-    top: calc(100% + 12px);
-    left: 50%;
-    transform: translateX(-50%) translateY(8px);
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
 
-    width: 260px;
+    width: 270px !important;
+    background: #ffffff !important;
 
-    background: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 2px;
+    border: 1px solid #dddddd !important;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18) !important;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 8px 0 !important;
 
-    padding: 8px 0;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
 
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    z-index: 99999 !important;
 
-    z-index: 9999;
-
-    transition:
-        opacity 0.2s ease,
-        transform 0.2s ease,
-        visibility 0.2s ease;
+    transition: opacity 0.2s ease, visibility 0.2s ease !important;
 }
-
 /* Dropdown links */
 .services-dropdown a {
     display: block;
@@ -441,6 +435,21 @@ img {
     pointer-events: auto;
 
     transform: translateX(-50%) translateY(0);
+}
+.services-dropdown-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 12px;
+}
+.nav-links a,
+.nav-links a:visited,
+.nav-links a:hover,
+.nav-links a:active {
+    color: #ffffff !important;
+    text-decoration: none !important;
 }
 
 /* Rotate arrow */
