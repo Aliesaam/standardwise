@@ -64,3 +64,37 @@ a{text-decoration:none;color:inherit}
 .services-hero{height:285px}.services-hero-content h1{font-size:21px}
 .service-card>img{height:85px}.service-card-content h3{font-size:8px}.service-card-content p{font-size:6.5px}
 }
+/* =========================================================
+   SERVICE CARDS SCROLL ANIMATION
+   ========================================================= */
+
+.service-card.scroll-bottom {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.service-card.scroll-bottom.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   LEARN MORE BUTTONS
+   ========================================================= */
+
+.learn-more {
+    display: inline-block;
+    margin-top: 8px;
+    color: #002454;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.learn-more:hover {
+    opacity: 0.75;
+    transform: translateY(-2px);
+}
