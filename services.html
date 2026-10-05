@@ -103,5 +103,36 @@ document.querySelectorAll('a').forEach(link => {
   });
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const animatedElements = document.querySelectorAll(
+        ".scroll-left, .scroll-right, .scroll-bottom"
+    );
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+
+                    // Animate only once
+                    observer.unobserve(entry.target);
+                }
+
+            });
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+
+});
+</script>
 </body>
 </html>
