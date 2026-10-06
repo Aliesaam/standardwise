@@ -182,6 +182,38 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            /* =========================
+   CONTACT US SCROLL ANIMATION
+========================= */
+
+const contactAnimatedElements = document.querySelectorAll(
+    ".contact-section .page-title, .contact-card, .form-wrapper"
+);
+
+const contactObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+contactAnimatedElements.forEach(element => {
+    contactObserver.observe(element);
+});
             document.body.classList.add('page-loaded');
         });
 
