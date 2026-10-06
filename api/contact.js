@@ -1,6 +1,8 @@
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed.' });
+        return res.status(405).json({
+            error: 'Method not allowed.'
+        });
     }
 
     try {
@@ -13,9 +15,10 @@ export default async function handler(req, res) {
             website = ''
         } = req.body || {};
 
-        // Honeypot: quietly accept obvious bot submissions.
         if (website) {
-            return res.status(200).json({ success: true });
+            return res.status(200).json({
+                success: true
+            });
         }
 
         const cleanFirstName = String(firstName).trim();
@@ -24,7 +27,12 @@ export default async function handler(req, res) {
         const cleanPhone = String(phone).trim();
         const cleanMessage = String(message).trim();
 
-        if (!cleanFirstName || !cleanLastName || !cleanEmail || !cleanMessage) {
+        if (
+            !cleanFirstName ||
+            !cleanLastName ||
+            !cleanEmail ||
+            !cleanMessage
+        ) {
             return res.status(400).json({
                 error: 'Please complete all required fields.'
             });
@@ -42,8 +50,8 @@ export default async function handler(req, res) {
             });
         }
 
-        // Correct email validation.
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (!emailPattern.test(cleanEmail)) {
             return res.status(400).json({
                 error: 'Please enter a valid email address.'
@@ -59,38 +67,59 @@ export default async function handler(req, res) {
             });
         }
 
-        const escapeHtml = (value) =>
-            value.replace(/[&<>"']/g, (char) => ({
-                '&': '&amp;',
-                '<': '&lt;',
-                '>': '&gt;',
-                '"': '&quot;',
-                "'": '&#039;'
-            }[char]));
+        const escapeHtml = (value) => {
+            return value.replace(
+                /[&<>"']/g,
+                (character) => ({
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;'
+                }[character])
+            );
+        };
 
         const html = `
             <h2>New StandardWise Website Inquiry</h2>
-            <p><strong>Name:</strong> ${escapeHtml(cleanFirstName)} ${escapeHtml(cleanLastName)}</p>
-            <p><strong>Email:</strong> ${escapeHtml(cleanEmail)}</p>
-            <p><strong>Phone:</strong> ${escapeHtml(cleanPhone || 'Not provided')}</p>
-            <p><strong>Message:</strong></p>
-            <p>${escapeHtml(cleanMessage).replace(/\n/g, '<br>')}</p>
+            <p>
+                <strong>Name:</strong>
+                ${escapeHtml(cleanFirstName)}
+                ${escapeHtml(cleanLastName)}
+            </p>
+            <p>
+                <strong>Email:</strong>
+                ${escapeHtml(cleanEmail)}
+            </p>
+            <p>
+                <strong>Phone:</strong>
+                ${escapeHtml(cleanPhone || 'Not provided')}
+            </p>
+            <p>
+                <strong>Message:</strong>
+            </p>
+            <p>
+                ${escapeHtml(cleanMessage).replace(/\n/g, '<br>')}
+            </p>
         `;
 
-        const resendResponse = await fetch('https://api.resend.com/emails', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${apiKey}`
-            },
-            body: JSON.stringify({
-                from: 'StandardWise Website <website@standardwise-cpa.com>',
-                to: ['info@standardwise-cpa.com'],
-                reply_to: cleanEmail,
-                subject: `New Website Inquiry from ${cleanFirstName} ${cleanLastName}`,
-                html
-            })
-        });
+        const resendResponse = await fetch(
+            'https://api.resend.com/emails',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${apiKey}`
+                },
+                body: JSON.stringify({
+                    from: 'StandardWise Website <website@standardwise-cpa.com>',
+                    to: ['info@standardwise-cpa.com'],
+                    reply_to: cleanEmail,
+                    subject: `New Website Inquiry from ${cleanFirstName} ${cleanLastName}`,
+                    html: html
+                })
+            }
+        );
 
         const result = await resendResponse.json();
 
@@ -101,7 +130,10 @@ export default async function handler(req, res) {
             });
         }
 
-        return res.status(200).json({ success: true });
+        return res.status(200).json({
+            success: true
+        });
+
     } catch (error) {
         console.error('Contact form error:', error);
         return res.status(500).json({
