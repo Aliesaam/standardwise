@@ -402,3 +402,31 @@ a { color: inherit; }
     height: 48px !important;
     font-size: 20px !important;
 }
+/* =========================================
+   CONSULTATION FORM MESSAGE
+   ========================================= */
+
+.form-message {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 600;
+    text-align: center;
+    min-height: 0;
+}
+
+.form-message.success {
+    color: #16803c;
+}
+
+.form-message.error {
+    color: #c62828;
+}
+
+
+/* Disabled button while sending */
+
+.consultation-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
