@@ -64,25 +64,17 @@ a {
 .services-nav-links {
     display: flex;
     align-items: center;
-    gap: 0;
-
+    gap: 15px;
     font-size: 16px;
     font-weight: 600;
-
     white-space: nowrap;
 }
 
-.services-nav-links > a,
-.services-nav-links > a:visited,
-.services-nav-links > a:hover,
-.services-nav-links > a:active {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
+.services-nav-links a {
     transition: opacity .2s ease;
 }
 
-.services-nav-links > a:hover {
+.services-nav-links a:hover {
     opacity: .75;
 }
 
@@ -118,17 +110,9 @@ a {
 .services-trigger:active {
     color: #ffffff !important;
     text-decoration: none !important;
-
-    margin: 0 10px !important;
-
     display: inline-flex;
     align-items: center;
-
     white-space: nowrap;
-}
-
-.services-trigger:hover {
-    opacity: .75;
 }
 
 
@@ -184,8 +168,8 @@ a {
 
     position: absolute;
 
-    left: 0;
-    right: 0;
+    left: -10px;
+    right: -10px;
 
     top: 100%;
 
@@ -552,13 +536,7 @@ a {
         font-size: 14px;
     }
 
-    .services-nav-links > a,
-    .services-trigger {
-        margin-left: 6px !important;
-        margin-right: 6px !important;
-    }
-
-    .services-hero-content {
+        .services-hero-content {
         width: 90%;
     }
 
@@ -587,14 +565,8 @@ a {
     }
 
     .services-nav-links {
-        gap: 0;
+        gap: 5px;
         font-size: 8px;
-    }
-
-    .services-nav-links > a,
-    .services-trigger {
-        margin-left: 3px !important;
-        margin-right: 3px !important;
     }
 
     .services-nav-links .nav-separator {
@@ -732,7 +704,7 @@ a {
 
     .services-nav-links {
         font-size: 7px;
-        gap: 0;
+        gap: 4px;
     }
 
     .services-nav-links .nav-separator {
