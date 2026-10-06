@@ -108,7 +108,16 @@
 
                 <div class="form-field">
                     <label for="phone">Phone Number</label>
-                    <input id="phone" name="phone" type="tel" placeholder="Your Phone Number" required>
+                   <input
+    id="phone"
+    name="phone"
+    type="tel"
+    inputmode="numeric"
+    pattern="[0-9]+"
+    placeholder="Your Phone Number"
+    required
+>
+                    <p id="phoneError" class="field-error"></p>
                 </div>
 
                 <div class="form-field">
@@ -364,6 +373,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+const phoneInput = document.getElementById("phone");
+const phoneError = document.getElementById("phoneError");
 
+phoneInput.addEventListener("input", function () {
+
+    // Remove anything that is not a number
+    this.value = this.value.replace(/[^0-9]/g, "");
+
+    if (this.value === "") {
+        phoneError.textContent = "";
+        this.setCustomValidity("");
+        return;
+    }
+
+    if (!/^[0-9]+$/.test(this.value)) {
+        phoneError.textContent = "Please enter numbers only.";
+        this.setCustomValidity("Please enter numbers only.");
+    } else {
+        phoneError.textContent = "";
+        this.setCustomValidity("");
+    }
+});
 </body>
 </html>
