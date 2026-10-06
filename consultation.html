@@ -83,7 +83,14 @@
         <div class="consultation-form-area">
             <h2>Request a Consultation</h2>
 
-            <form class="consultation-form" action="#" method="POST">
+            <form class="consultation-form" id="consultationForm">
+                <input
+    type="text"
+    name="website"
+    tabindex="-1"
+    autocomplete="off"
+    style="position:absolute;left:-9999px;"
+>
                 <div class="form-field">
                     <label for="fullName">Full Name</label>
                     <input id="fullName" name="fullName" type="text" placeholder="Your Full Name" required>
@@ -124,7 +131,10 @@
                     <textarea id="message" name="message" rows="4" placeholder="Tell us how we can help" required></textarea>
                 </div>
 
-                <button type="submit" class="consultation-submit">Request a Consultation <span>→</span></button>
+             <button type="submit" class="consultation-submit" id="consultationSubmit">
+    Request a Consultation <span>→</span>
+</button>
+                <p id="formMessage" class="form-message"></p>
                 <p class="form-note">We’ll review your request and contact you to discuss the next steps.</p>
             </form>
         </div>
@@ -207,6 +217,151 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+});
+    
+document.addEventListener("DOMContentLoaded", function () {
+
+    document.body.classList.add("page-loaded");
+
+    /* =========================
+       SCROLL ANIMATION
+    ========================= */
+
+    const animatedElements = document.querySelectorAll(".scroll-bottom");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target);
+                }
+
+            });
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+
+
+    /* =========================
+       PAGE NAVIGATION FADE
+    ========================= */
+
+    document.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", function (e) {
+
+            const href = link.getAttribute("href");
+
+            if (
+                href &&
+                !href.startsWith("#") &&
+                !href.startsWith("http") &&
+                !link.closest(".services-dropdown")
+            ) {
+
+                e.preventDefault();
+
+                document.body.classList.remove("page-loaded");
+
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 350);
+            }
+
+        });
+
+    });
+
+
+    /* =========================
+       CONSULTATION FORM
+    ========================= */
+
+    const form = document.getElementById("consultationForm");
+    const submitButton = document.getElementById("consultationSubmit");
+    const formMessage = document.getElementById("formMessage");
+
+    if (form) {
+
+        form.addEventListener("submit", async function (e) {
+
+            e.preventDefault();
+
+            formMessage.textContent = "";
+            formMessage.className = "form-message";
+
+            submitButton.disabled = true;
+            submitButton.innerHTML = "Sending...";
+
+            const formData = new FormData(form);
+
+            const data = {
+                fullName: formData.get("fullName"),
+                companyName: formData.get("companyName"),
+                email: formData.get("email"),
+                phone: formData.get("phone"),
+                service: formData.get("service"),
+                message: formData.get("message"),
+                website: formData.get("website")
+            };
+
+            try {
+
+                const response = await fetch("/api/consultation", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(
+                        result.error ||
+                        "Something went wrong. Please try again."
+                    );
+                }
+
+                formMessage.textContent =
+                    "Thank you! Your consultation request has been sent successfully. We’ll contact you soon.";
+
+                formMessage.classList.add("success");
+
+                form.reset();
+
+            } catch (error) {
+
+                console.error("Consultation form error:", error);
+
+                formMessage.textContent =
+                    error.message ||
+                    "Something went wrong. Please try again later.";
+
+                formMessage.classList.add("error");
+
+            } finally {
+
+                submitButton.disabled = false;
+
+                submitButton.innerHTML =
+                    'Request a Consultation <span>→</span>';
+
+            }
+
+        });
+
+    }
+
 });
 </script>
 
