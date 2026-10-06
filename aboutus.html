@@ -159,6 +159,38 @@
                 }
             });
         });
+        /* =========================
+   ABOUT US SCROLL ANIMATION
+========================= */
+
+const aboutAnimatedElements = document.querySelectorAll(
+    ".about-mission .info-box, .why-us .container"
+);
+
+const aboutObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+aboutAnimatedElements.forEach(element => {
+    aboutObserver.observe(element);
+});
     </script>
 </body>
 </html>
