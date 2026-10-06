@@ -358,3 +358,31 @@ a { color: inherit; }
 .consultation-form textarea {
     font-size: 14px;
 }
+/* ===== LARGER LEFT CONSULTATION TEXT ===== */
+
+.consultation-left .eyebrow {
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+}
+
+.consultation-left h1 {
+    font-size: 44px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 22px !important;
+}
+
+.consultation-left p {
+    font-size: 19px !important;
+    line-height: 1.55 !important;
+    max-width: 600px !important;
+    margin-bottom: 30px !important;
+}
+
+.consultation-contact h4 {
+    font-size: 18px !important;
+    margin-bottom: 5px !important;
+}
+
+.consultation-contact span {
+    font-size: 16px !important;
+}
