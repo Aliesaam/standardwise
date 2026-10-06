@@ -1673,4 +1673,43 @@ body {
 body.page-loaded {
     opacity: 1;
 }
+   /* =========================================================
+   ABOUT US SCROLL ANIMATIONS
+   ========================================================= */
+
+.about-mission .info-box,
+.why-us .container {
+    opacity: 0;
+    transform: translateY(60px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.about-mission .info-box.show,
+.why-us .container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero animation */
+
+body:has(.about-mission) .hero-content {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+body:has(.about-mission).page-loaded .hero-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Make the two boxes appear slightly after each other */
+
+.about-mission .info-box:nth-child(2) {
+    transition-delay: 0.15s;
+}
 }
