@@ -358,31 +358,47 @@ a { color: inherit; }
 .consultation-form textarea {
     font-size: 14px;
 }
-/* ===== LARGER LEFT CONSULTATION TEXT ===== */
 
+/* ===== BIGGER LEFT CONSULTATION SECTION ===== */
+
+.consultation-left {
+    padding: 55px !important;
+}
+
+/* Small top heading */
 .consultation-left .eyebrow {
-    font-size: 18px !important;
-    margin-bottom: 12px !important;
+    font-size: 20px !important;
+    margin-bottom: 16px !important;
 }
 
+/* Main heading */
 .consultation-left h1 {
-    font-size: 44px !important;
-    line-height: 1.15 !important;
-    margin-bottom: 22px !important;
+    font-size: 52px !important;
+    line-height: 1.12 !important;
+    margin-bottom: 26px !important;
 }
 
+/* Description */
 .consultation-left p {
-    font-size: 19px !important;
+    font-size: 21px !important;
     line-height: 1.55 !important;
-    max-width: 600px !important;
-    margin-bottom: 30px !important;
+    max-width: 650px !important;
+    margin-bottom: 38px !important;
 }
 
+/* Contact information */
 .consultation-contact h4 {
-    font-size: 18px !important;
-    margin-bottom: 5px !important;
+    font-size: 20px !important;
+    margin-bottom: 7px !important;
 }
 
 .consultation-contact span {
-    font-size: 16px !important;
+    font-size: 18px !important;
+}
+
+/* Make the contact icons bigger */
+.consultation-contact .contact-icon {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 20px !important;
 }
