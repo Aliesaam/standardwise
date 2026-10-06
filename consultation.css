@@ -319,8 +319,42 @@ a { color: inherit; }
     .whatsapp-float { width: 50px; height: 50px; right: 18px; bottom: 18px; }
     .whatsapp-float svg { width: 28px; height: 28px; }
 }
+/* Slightly larger consultation text */
+.consultation-left .eyebrow {
+    font-size: 16px;
+}
 
+.consultation-left h1 {
+    font-size: 38px;
+    line-height: 1.18;
+}
+
+.consultation-left p {
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+.consultation-contact h4 {
+    font-size: 16px;
+}
+
+.consultation-contact span {
+    font-size: 14px;
+}
 @media (prefers-reduced-motion: reduce) {
     body, .scroll-bottom, .services-dropdown, .consultation-submit { transition: none !important; }
     .scroll-bottom { opacity: 1; transform: none; }
+}
+.consultation-form h2 {
+    font-size: 29px;
+}
+
+.consultation-form label {
+    font-size: 15px;
+}
+
+.consultation-form input,
+.consultation-form select,
+.consultation-form textarea {
+    font-size: 14px;
 }
