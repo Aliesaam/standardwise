@@ -1661,4 +1661,16 @@ body:has(.about-mission) .hero-image img {
 .services-dropdown-wrapper:focus-within .services-dropdown {
     display: flex !important;
 }
+   /* =========================================================
+   SMOOTH PAGE TRANSITION
+   ========================================================= */
+
+body {
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
 }
